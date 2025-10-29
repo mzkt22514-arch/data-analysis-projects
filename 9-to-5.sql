@@ -3,15 +3,15 @@
 --TASK1, Q1: MAKE NOTES
 --dbo.annual_2016: id, series_id, year, period, value, footnote_codes, original_file
 --dbo.datatype: data_type_code, data_type_text
---dbo.footnote: footnote_code, footnote_text
+--dbo.footnote: footnote_codes, footnote_text
 --dbo.industry: id, industry_code, naics_code, publishing_status, industry_name, display_level, selectable, sort_sequence
 --dbo.january_2017: id, series_id, year, period, value, footnote_codes, original_file
 --dbo.period: period_code, month_abbr, month
 --dbo.seasonal: industry_code, seasonal_text
---dbo.series: series_id, superseector_code, industry_code, data_type_code, seasonal, series_title
+--dbo.series: series_id, supersector_code, industry_code, data_type_code, seasonal, series_title
 --dbo.supersector: - supersector_code, supersector_name
 
---CONNECTING TABLES & COLUMNS:
+--CONNECTING COLUMNS & TABLES:
 --id: dbo.annual_2016, dbo.industry, dbo.january_2017
 --series_id: dbo.annual_2016, dbo.january_2017, dbo.series
 --year: dbo.annual_2016, dbo.january_2017
@@ -20,7 +20,7 @@
 --original_file: dbo.annual_2016, dbo.january_2017
 --data_type_code: dbo.datatype, dbo.series
 --industry_code: dbo.industry, dbo.seasonal, dbo.series
---superseector_code: dbo.series, dbo.supersector
+--supersector_code: dbo.series, dbo.supersector
 
 --TASK1, Q2: The data type for women employees is "Women Employees" and the data_type_code is 10.
 
