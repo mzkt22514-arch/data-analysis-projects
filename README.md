@@ -5,7 +5,7 @@ This repository holds all code snippets and examples from the reading chapters o
 
 # Data Analysis - EDA Checkpoint 2 Project
 
-# Dataset
+## Dataset
 - **Source:** https://www.kaggle.com/datasets/jessemostipak/hotel-booking-demand/data
 - **File used:** hotel_bookings.csv
 
