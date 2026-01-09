@@ -3,7 +3,7 @@
 This repository holds all code snippets and examples from the reading chapters of the [Data Analysis Textbook](https://education.launchcode.org/data-analysis-curriculum/)
 
 
-# Data Analysis Checkpoint 2
+# Data Analysis - EDA Checkpoint 2 Project
 
 # Dataset
 - **Source:** https://www.kaggle.com/datasets/jessemostipak/hotel-booking-demand/data
