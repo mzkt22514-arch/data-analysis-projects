@@ -1,0 +1,29 @@
+Table providers {
+  provider_id integer [primary key]
+  full_name varchar
+  specialty varchar
+  npi varchar
+}
+
+Table appointment {
+  appointment_id integer [primary key]
+  patient_id integer
+  provider_id integer
+  appt_datetime datetime
+  reason varchar
+  copay_amount integer
+}
+
+Table patients {
+  patient_id integer [primary key]
+  full_name	varchar
+  birthdate	datetime
+  email	varchar
+  height_cm integer
+}
+
+
+
+Ref: "providers"."provider_id" < "appointment"."provider_id"
+
+Ref: "appointment"."patient_id" < "patients"."patient_id"

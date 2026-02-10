@@ -1,0 +1,44 @@
+Table customer {
+  customer_id	interger [primary key]
+  full_name	varchar
+  email	varchar
+  phone varchar
+  zip_code integer
+}
+
+Table order_items {
+  order_item_id	integer [primary key]
+  order_id integer
+  product_id integer
+  quantity integer
+  unit_price_at_order decimal
+}
+
+Table orders {
+  order_id integer [primary key]
+  customer_id	integer
+  order_date datetime
+  status varchar
+}
+
+Table products {
+  product_id integer [primary key]
+  name varchar
+  category varchar
+  unit_price decimal
+}
+
+Table shipments {
+  shipment_id	integer [primary key]
+  order_id integer
+  shipped_date datetime
+  tracking_number varchar
+}
+
+Ref: "orders"."order_id" < "shipments"."order_id"
+
+Ref: "products"."product_id" < "order_items"."product_id"
+
+Ref: "order_items"."order_id" < "orders"."order_id"
+
+Ref: "customer"."customer_id" < "orders"."customer_id"

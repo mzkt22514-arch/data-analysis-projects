@@ -1,0 +1,31 @@
+// Use DBML to define your database structure
+// Docs: https://dbml.dbdiagram.io/docs
+
+Table student {
+  student_id integer [primary key]
+  first_name varchar [not null]
+  last_name varchar [not null]
+  email varchar [not null, unique]
+  phone integer
+  age integer
+}
+
+Table enrollments {
+  enrollment_id integer [primary key]
+  student_id integer [not null]
+  course_id integer [not null]
+  grade varchar
+  enrolled_at datetime
+}
+
+Table courses {
+  course_id integer [primary key]
+  title varchar [not null]
+  department varchar [not null]
+  credits integer [not null]
+  start_date datetime
+}
+
+Ref: "enrollments"."student_id" < "student"."student_id"
+
+Ref: "enrollments"."course_id" < "courses"."course_id"
